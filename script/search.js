@@ -1,45 +1,72 @@
- let value = ["吴君迪100米最佳成绩是多少？", "吴君迪200米最佳成绩是多少？", "吴君迪骑车极速是多少？", "吴君迪是单身吗？", "吴君迪最喜欢哪个品种的狗？", "吴君迪是哪个幼儿园毕业的？", "吴君迪去过北京吗？", "吴君迪会骑马吗？", "吴君迪会哪些语言？", "吴君迪跑步拉爆过几个人？", "吴君迪跑步被几个人拉爆过？"];
+ let value = ["吴君迪个人网站的运作原理是什么？","吴君迪100米最佳成绩是多少？", "吴君迪200米最佳成绩是多少？", "吴君迪骑车极速是多少？", "吴君迪跑步极速是多少？", "吴君迪最喜欢哪个品种的狗？", "吴君迪是哪个幼儿园毕业的？", "吴君迪去过鸟巢体育馆吗？", "吴君迪会骑马吗？", "吴君迪会哪些语言？", "吴君迪一口气能跑多远？", "吴君迪一口气能骑行多远？"];
     let inp = document.querySelector("input");
     let neiron = document.querySelector(".neiron");
     inp.onkeyup=function(){
 neiron.style.display = "none";
-}
+
  // 由有内容输入弹出
 
-   function clicke(){
      
       neiron.style.display = "block";
-      // 声明一个字符串接收筛选好的数据
-      let str = "";
  var i=0
  var num=0
-      // 用fore循环里面的数据
+      // 用for循环里面的数据
       value.forEach((item) => {
-        // 声明一个变量接收
+       
         let res = item.indexOf(inp.value);
         console.log(res);
         if (res != -1) {
             // 这里判断就是把不是-1的读取出来
-          str =  "<p>" + item+  "<p>"
+         
         if(inp.value != ''){
          
-if(num==0){
- document.write("<p align='center' style='font-size:24px;font-weight:bold;color:#fc0000;'>搜索结果</p>");
- document.write("<td><input type='button' onClick='history.go(0)' value='返回'/></td><p> </p>");
-}
+
           num++
 
+if(num==1){
+neiron.innerHTML=""
 
+}
 
-switch (item) {
-  case "吴君迪100米最佳成绩是多少？":
-    url = "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.sergeants.cn%2Fsites%2Fdefault%2Ffiles%2F2015%2F10%2Fjinmaomeirongyanghu.jpg&refer=http%3A%2F%2Fwww.sergeants.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667911880&t=0360334753b6caa3704c81977b12567f";
-    break;
-  case "吴君迪200米最佳成绩是多少？":
-    url = "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.2008php.com%2F09_Website_appreciate%2F10-07-03%2F1278162492_1.jpg&refer=http%3A%2F%2Fwww.2008php.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667911980&t=17c807c077a6c692469ee8f88e6ca934";
-    break;
-  default:
-    url = "https://wjd.email/";
+      
+if(item=="吴君迪个人网站的运作原理是什么？"){
+neiron.innerHTML+="<div class='tip'><a href='/que/q1.html'>💡"+item+"</a><p></p></div>"
+}
+else if(item=="吴君迪100米最佳成绩是多少？"){
+neiron.innerHTML+="<div class='tip'><a href='/que/q2.html'>💡"+item+"</a><p></p></div>"
+}
+else if(item=="吴君迪200米最佳成绩是多少？"){
+neiron.innerHTML+="<div class='tip'><a href='/que/q3.html'>💡"+item+"</a><p></p></div>"
+}
+else if(item=="吴君迪骑车极速是多少？"){
+neiron.innerHTML+="<div class='tip'><a href='/que/q4.html'>💡"+item+"</a><p></p></div>"
+}
+else if(item=="吴君迪跑步极速是多少？"){
+neiron.innerHTML+="<div class='tip'><a href='/que/q5.html'>💡"+item+"</a><p></p></div>"
+}
+else if(item=="吴君迪最喜欢哪个品种的狗？"){
+neiron.innerHTML+="<div class='tip'><a href='/que/q6.html'>💡"+item+"</a><p></p></div>"
+}
+else if(item=="吴君迪是哪个幼儿园毕业的？"){
+neiron.innerHTML+="<div class='tip'><a href='/que/q7.html'>💡"+item+"</a><p></p></div>"
+}
+else if(item=="吴君迪去过鸟巢体育馆吗？"){
+neiron.innerHTML+="<div class='tip'><a href='/que/q8.html'>💡"+item+"</a><p></p></div>"
+}
+else if(item=="吴君迪会骑马吗？"){
+neiron.innerHTML+="<div class='tip'><a href='/que/q9.html'>💡"+item+"</a><p></p></div>"
+}
+else if(item=="吴君迪会哪些语言？"){
+neiron.innerHTML+="<div class='tip'><a href='/que/q10.html'>💡"+item+"</a><p></p></div>"
+}
+else if(item=="吴君迪一口气能跑多远？"){
+neiron.innerHTML+="<div class='tip'><a href='/que/q11.html'>💡"+item+"</a><p></p></div>"
+}
+else if(item=="吴君迪一口气能骑行多远？"){
+neiron.innerHTML+="<div class='tip'><a href='/que/q12.html'>💡"+item+"</a><p></p></div>"
+}
+else{
+neiron.innerHTML+="<div class='tip'><p>😭糟糕，问题不见了</p></div>"
 }
 
 
@@ -47,7 +74,15 @@ switch (item) {
 
 
 
-          document.write( item.link(url)+"<p> </p>" );
+
+
+
+
+
+
+  //neiron.innerHTML+="<a href='' target='_blank'>"+item+"</a><p></p>"
+
+          
          }
  
         }
@@ -57,34 +92,25 @@ else
 }
 
  
- //   for(let i = 0 ;i<value.length;i++){
-    //    let res = value[i].indexOf(inp.value);
-    //    if(  res  != -1){
-     //       str +=  "<p>" + value[i]+  "<p>"
-     //   }
- //   }
- 
- 
- 
- 
-
       });
 
 if (num>0){
-document.write("<p>一共找到"+num+"条数据 </p>" );
+neiron.innerHTML+="<p>" + '共找到' +num+'条数据'+ "<p>"
 }
 
-      if(inp.value == '' || i==value.length){
+      if(i==value.length){
        neiron.innerHTML = "<p>" + '没有结果' + "<p>"
 
-      }else{
-        neiron.innerHTML = str;
- 
       }
-    };
+
+if(inp.value == '' ){
+       neiron.style.display = "none";
+   neiron.innerHTML = "";
+
+      }
+
+
+
+  };
  
-    // 输入失去焦点
-    inp.onblur = function () {
-      neiron.style.display = "none";
-      neiron.innerHTML = "";
-    };
+  
