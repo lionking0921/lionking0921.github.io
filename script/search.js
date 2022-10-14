@@ -110,8 +110,8 @@ if(inp.value == '' ){
  
  
  
-        service-wrap-w.style.display = "none";
-   service-wrap-w.innerHTML = "";
+        serviceWrapW.style.display = "none";
+   serviceWrapW.innerHTML = "";
  
  
  
