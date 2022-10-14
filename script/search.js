@@ -106,17 +106,6 @@ neiron.innerHTML+="<p>" + '共找到' +num+'条数据'+ "<p>"
 if(inp.value == '' ){
        neiron.style.display = "none";
    neiron.innerHTML = "";
- 
- 
- 
- 
-        serviceWrapW.style.display = "none";
-   serviceWrapW.innerHTML = "";
- 
- 
- 
- 
-
       }
 
 
