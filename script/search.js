@@ -1,4 +1,4 @@
- let value = ["吴君迪个人网站的运作原理是什么？","吴君迪100米最佳成绩是多少？", "吴君迪200米最佳成绩是多少？", "吴君迪骑车极速是多少？", "吴君迪跑步极速是多少？", "吴君迪最喜欢哪个品种的狗？", "吴君迪是哪个幼儿园毕业的？", "吴君迪去过鸟巢体育馆吗？", "吴君迪会骑马吗？", "吴君迪会哪些语言？", "吴君迪一口气能跑多远？", "吴君迪一口气能骑行多远？"];
+ let value = ["吴君迪个人网站的运作原理是什么？","吴君迪100米最佳成绩是多少？", "吴君迪200米最佳成绩是多少？", "吴君迪骑车极速是多少？", "吴君迪跑步极速是多少？", "吴君迪最喜欢哪个品种的狗？", "吴君迪是哪个幼儿园毕业的？", "吴君迪去过鸟巢体育馆吗？", "吴君迪会骑马吗？", "吴君迪会哪些语言？", "吴君迪一口气能跑多远？", "吴君迪一口气能骑行多远？","如何下载吴君迪写的天气软件？"];
     let inp = document.querySelector("input");
     let neiron = document.querySelector(".neiron");
     inp.onkeyup=function(){
@@ -65,6 +65,9 @@ neiron.innerHTML+="<div class='tip'><a href='/que/q11.html'>💡"+item+"</a><p><
 else if(item=="吴君迪一口气能骑行多远？"){
 neiron.innerHTML+="<div class='tip'><a href='/que/q12.html'>💡"+item+"</a><p></p></div>"
 }
+else if(item=="如何下载吴君迪写的天气软件？"){
+neiron.innerHTML+="<div class='tip'><a href='/que/q13.html'>💡"+item+"</a><p></p></div>"
+}
 else{
 neiron.innerHTML+="<div class='tip'><p>😭糟糕，问题不见了</p></div>"
 }
@@ -106,6 +109,7 @@ neiron.innerHTML+="<p>" + '共找到' +num+'条数据'+ "<p>"
 if(inp.value == '' ){
        neiron.style.display = "none";
    neiron.innerHTML = "";
+
       }
 
 
