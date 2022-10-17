@@ -2,6 +2,34 @@
  <head>
   <title>吴君迪</title>
    <script src="/script/click.js"></script>
+
+
+ <script>
+    function makeMulti (string) {
+        let l = new String(string)
+        l = l.substring(l.indexOf("/*") + 3, l.lastIndexOf ("*/"))
+        return l
+    }
+    let string = function () {
+  /*
+ __          __       _   _____  
+ \ \        / /      | | |  __ \ 
+  \ \  /\  / /       | | | |  | |
+   \ \/  \/ /    _   | | | |  | |
+    \  /\  /    | |__| | | |__| |
+     \/  \/      \____/  |_____/ 
+                            
+       吴君迪的个人网站，版权所有。*/                                                                          
+    }
+    console.log(makeMulti(string));
+    console.log(/* 其他信息 */);
+</script>
+
+
+
+
+
+
  </head>
 
  <body>
