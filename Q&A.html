@@ -308,5 +308,36 @@ background: rgba(255, 255, 0, 1);
   </style>
 
 <script src="/script/search.js"></script>
+  
+  
+ <script>
+    function makeMulti (string) {
+        let l = new String(string)
+        l = l.substring(l.indexOf("/*") + 3, l.lastIndexOf ("*/"))
+        return l
+    }
+    let string = function () {
+  /*
+    ____                  
+  / __ \  ___      /\    
+ | |  | |( _ )    /  \   
+ | |  | |/ _ \/\ / /\ \  
+ | |__| | (_>  </ ____ \ 
+  \___\_\\___/\/_/    \_\
+                 
+       你问我答系统*/                                                                          
+    }
+    console.log(makeMulti(string));
+    console.log(/* 其他信息 */);
+</script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 </html>
