@@ -28,43 +28,43 @@ neiron.innerHTML=""
 }
 
       
-if(item=="【问题】吴君迪个人网站的运作原理是什么？"){
+if(item=="Q:吴君迪个人网站的运作原理是什么？"){
 neiron.innerHTML+="<div class='tip'><a href='/que/q1.html'>❓"+item+"</a><p></p></div>"
 }
-else if(item=="【问题】吴君迪100米最佳成绩是多少？"){
+else if(item=="Q:吴君迪100米最佳成绩是多少？"){
 neiron.innerHTML+="<div class='tip'><a href='/que/q2.html'>❓"+item+"</a><p></p></div>"
 }
-else if(item=="【问题】吴君迪200米最佳成绩是多少？"){
+else if(item=="Q:吴君迪200米最佳成绩是多少？"){
 neiron.innerHTML+="<div class='tip'><a href='/que/q3.html'>❓"+item+"</a><p></p></div>"
 }
-else if(item=="【问题】吴君迪骑车极速是多少？"){
+else if(item=="Q:吴君迪骑车极速是多少？"){
 neiron.innerHTML+="<div class='tip'><a href='/que/q4.html'>❓"+item+"</a><p></p></div>"
 }
-else if(item=="【问题】吴君迪跑步极速是多少？"){
+else if(item=="Q:吴君迪跑步极速是多少？"){
 neiron.innerHTML+="<div class='tip'><a href='/que/q5.html'>❓"+item+"</a><p></p></div>"
 }
-else if(item=="【问题】吴君迪最喜欢哪个品种的狗？"){
+else if(item=="Q:吴君迪最喜欢哪个品种的狗？"){
 neiron.innerHTML+="<div class='tip'><a href='/que/q6.html'>❓"+item+"</a><p></p></div>"
 }
-else if(item=="【问题】吴君迪是哪个幼儿园毕业的？"){
+else if(item=="Q:吴君迪是哪个幼儿园毕业的？"){
 neiron.innerHTML+="<div class='tip'><a href='/que/q7.html'>❓"+item+"</a><p></p></div>"
 }
-else if(item=="【问题】吴君迪去过鸟巢体育馆吗？"){
+else if(item=="Q:吴君迪去过鸟巢体育馆吗？"){
 neiron.innerHTML+="<div class='tip'><a href='/que/q8.html'>❓"+item+"</a><p></p></div>"
 }
-else if(item=="【问题】吴君迪会骑马吗？"){
+else if(item=="Q:吴君迪会骑马吗？"){
 neiron.innerHTML+="<div class='tip'><a href='/que/q9.html'>❓"+item+"</a><p></p></div>"
 }
-else if(item=="【问题】吴君迪会哪些语言？"){
+else if(item=="Q:吴君迪会哪些语言？"){
 neiron.innerHTML+="<div class='tip'><a href='/que/q10.html'>❓"+item+"</a><p></p></div>"
 }
-else if(item=="【问题】吴君迪一口气能跑多远？"){
+else if(item=="Q:吴君迪一口气能跑多远？"){
 neiron.innerHTML+="<div class='tip'><a href='/que/q11.html'>❓"+item+"</a><p></p></div>"
 }
-else if(item=="【问题】吴君迪一口气能骑行多远？"){
+else if(item=="Q:吴君迪一口气能骑行多远？"){
 neiron.innerHTML+="<div class='tip'><a href='/que/q12.html'>❓"+item+"</a><p></p></div>"
 }
-else if(item=="【问题】如何下载吴君迪写的天气软件？"){
+else if(item=="Q:如何下载吴君迪写的天气软件？"){
 neiron.innerHTML+="<div class='tip'><a href='/que/q13.html'>❓"+item+"</a><p></p></div>"
 }
 else{
