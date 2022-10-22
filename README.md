@@ -12,3 +12,5 @@
 ## 三.示例
 首页
 ![](http://wjd.email/pic/main.jpg)
+问答页面
+![](http://wjd.email/pic/wenda.jpg)
