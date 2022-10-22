@@ -13,4 +13,4 @@
 首页
 ![](http://wjd.email/pic/main.jpg)
 问答页面
-![](http://wjd.email/pic/wenda.jpg)
+![](https://raw.githubusercontent.com/lionking0921/lionking0921.github.io/main/pic/wenda.jpg)
