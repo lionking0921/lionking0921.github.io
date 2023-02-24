@@ -1,0 +1,14 @@
+*.class
+*.log
+*.tmp
+*.jar
+*.war
+*.nar
+*.ear
+*.tar.gz
+*.rar
+!*.html
+!*.jpg
+!*.png
+!*.js
+!*.css
