@@ -158,22 +158,22 @@ if(flag){
         str=str+arreta[i]+"Pa·s\n"
     }
 
-    document.getElementById("dba").innerHTML="d爸="+dba+"mm"
-    document.getElementById("usad").innerHTML="UsAd爸=σd爸="+xigamad+"mm"
-    document.getElementById("usbd").innerHTML="UsBd爸="+Usd+"mm"
+    document.getElementById("dba").innerHTML="小球直径平均值d="+dba+"mm"
+    document.getElementById("usad").innerHTML="直径A类不确定度UsAd=标准差σd="+xigamad+"mm"
+    document.getElementById("usbd").innerHTML="直径B类不确定度UsBd="+Usd+"mm"
 
-    document.getElementById("tba").innerHTML="d爸="+tba+"s"
-    document.getElementById("usat").innerHTML="UsAt爸=σd爸="+xigamat+"s"
-    document.getElementById("usbt").innerHTML="UsBt爸="+Ust+"s"
+    document.getElementById("tba").innerHTML="时间平均值t="+tba+"s"
+    document.getElementById("usat").innerHTML="时间A类不确定度UsAt=标准差σt="+xigamat+"s"
+    document.getElementById("usbt").innerHTML="时间B类不确定度UsBt="+Ust+"s"
 
-    document.getElementById("etaba").innerHTML="平均粘度系数eta爸="+etaba+"Pa·s"
-    document.getElementById("xigamaeta").innerHTML="σeta爸="+xigamaeta+"Pa·s"
+    document.getElementById("etaba").innerHTML="平均粘度系数eta="+etaba+"Pa·s"
+    document.getElementById("xigamaeta").innerHTML="粘度系数标准差σeta="+xigamaeta+"Pa·s"
     document.getElementById("eta").innerHTML="粘度系数eta具体值(共"+datanum+"组数据)=\n"+str
     
     document.getElementById("E").innerHTML="E="+E
-    document.getElementById("useta").innerHTML="Useta爸="+useta
+    document.getElementById("useta").innerHTML="Useta=E*eta="+useta
 
-    document.getElementById("v").innerHTML="速度v="+v+"m/s"
+    document.getElementById("v").innerHTML="小球下落速度v="+v+"m/s"
 
 }
 }
