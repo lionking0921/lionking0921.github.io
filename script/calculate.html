@@ -1,0 +1,71 @@
+<html>
+  <head>
+   <meta charset="utf-8">
+    <title>液体粘度系数计算器</title>
+  </head>
+
+  <body>
+<p align="center" style="font-size:36px;font-weight:bold;">液体粘度系数计算器</p>
+<p align="center" style="font-size:24px;font-weight:bold;">编程：吴君迪</p>
+
+<p style="font-size:18px;font-weight:bold;">请输入小球直径(d/mm)数据不足可留空</p>
+<input type="text" id="d1"/><p></p>
+<input type="text" id="d2"/><p></p>
+<input type="text" id="d3"/><p></p>
+<input type="text" id="d4"/><p></p>
+<input type="text" id="d5"/><p></p>
+<input type="text" id="d6"/><p></p>
+<input type="text" id="d7"/><p></p>
+<input type="text" id="d8"/><p></p>
+<input type="text" id="d9"/><p></p>
+<input type="text" id="d10"/><p></p>
+
+<p style="font-size:18px;font-weight:bold;">请输入时间数据(t/s)数据不足可留空</p>
+<input type="text" id="t1"/><p></p>
+<input type="text" id="t2"/><p></p>
+<input type="text" id="t3"/><p></p>
+<input type="text" id="t4"/><p></p>
+<input type="text" id="t5"/><p></p>
+<input type="text" id="t6"/><p></p>
+<input type="text" id="t7"/><p></p>
+<input type="text" id="t8"/><p></p>
+<input type="text" id="t9"/><p></p>
+<input type="text" id="t10"/><p></p>
+
+<p style="font-size:18px;font-weight:bold;">请输入小球密度p(kg/m3)</p>
+<input type="text" id="pball"/><p></p>
+<p style="font-size:18px;font-weight:bold;">请输入液体密度p0(kg/m3)</p>
+<input type="text" id="pliquid"/><p></p>
+<p style="font-size:18px;font-weight:bold;">请输入量筒直径D0(m)</p>
+<input type="text" id="D0"/><p></p>
+<p style="font-size:18px;font-weight:bold;">请输入液体深度H(m)</p>
+<input type="text" id="H"/><p></p>
+<p style="font-size:18px;font-weight:bold;">请输入M1与M2间距L(m)</p>
+<input type="text" id="L"/><p></p>
+
+<p style="font-size:18px;font-weight:bold;">请输入不确定度(非必填)</p>
+▲L=<input type="text" id="deltaL"/>m<p></p>
+▲d=<input type="text" id="deltad"/>mm<p></p>
+▲t=<input type="text" id="deltat"/>s<p></p>
+▲p0=<input type="text" id="deltap"/>kg/m3<p></p>
+
+<input type="button" name="Button" value="计算" onclick="main();">
+
+<p style="font-size:18px;font-weight:bold;">计算结果</p>
+<div id="dba"></div>
+<div id="usad"></div>
+<div id="usbd"></div>
+<div id="tba"></div>
+<div id="usat"></div>
+<div id="usbt"></div>
+<div id="etaba"></div>
+<div id="xigamaeta"></div>
+<div id="eta"></div>
+<div id="E"></div>
+<div id="useta"></div>
+<div id="v"></div>
+  </body>
+
+<script src="/script/calculate.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
