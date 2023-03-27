@@ -166,12 +166,12 @@ if(flag){
     document.getElementById("usat").innerHTML="时间A类不确定度UsAt=标准差σt="+xigamat+"s"
     document.getElementById("usbt").innerHTML="时间B类不确定度UsBt="+Ust+"s"
 
-    document.getElementById("etaba").innerHTML="平均粘度系数eta="+etaba+"Pa·s"
-    document.getElementById("xigamaeta").innerHTML="粘度系数标准差σeta="+xigamaeta+"Pa·s"
-    document.getElementById("eta").innerHTML="粘度系数eta具体值(共"+datanum+"组数据)=\n"+str
+    document.getElementById("etaba").innerHTML="平均粘度系数η="+etaba+"Pa·s"
+    document.getElementById("xigamaeta").innerHTML="粘度系数标准差ση="+xigamaeta+"Pa·s"
+    document.getElementById("eta").innerHTML="粘度系数η具体值(共"+datanum+"组数据)=\n"+str
     
     document.getElementById("E").innerHTML="E="+E
-    document.getElementById("useta").innerHTML="Useta=E*eta="+useta
+    document.getElementById("useta").innerHTML="Usη=E*η="+useta
 
     document.getElementById("v").innerHTML="小球下落速度v="+v+"m/s"
 
