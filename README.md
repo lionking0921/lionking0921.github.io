@@ -6,11 +6,11 @@
 ### 💡网站目前实现的功能有：
 ### 1.主页索引（index.html，自己写的）
 ### 2.问题搜索（基于js实现，自己写的）
-### 3.提问留言（接入第三方评论系统）
-#### 备注：由于GitHub仅支持静态网页，所以动态评论系统需要外部接入服务。
-### 4.由于外接评论系统带有页面广告，为了保障用户体验，增加评论系统广告隐藏功能（基于html内部的css实现，自己写的）
+### 3.资源下载（吴君迪的软件作品，欢迎下载）
 ## 三.示例
 首页
-![](http://wjd.email/pic/main.jpg)
+![](http://wjd.email/pic/mainpage.png)
 问答页面
-![](https://raw.githubusercontent.com/lionking0921/lionking0921.github.io/main/pic/wenda.jpg)
+![](http://wjd.email/pic/QApage.png)
+资源下载
+![](http://wjd.email/pic/respage.png)
