@@ -175,10 +175,8 @@ if(flag){
     for(var i=0;i<datanum;i++){
         str=str+arreta[i]+"Pa·s\n"
     }
-    if(E==NaN){
+    if(minl==1){
     E="无数据"
-    }
-    if(useta==NaN){
     useta="无数据"
     }
 
