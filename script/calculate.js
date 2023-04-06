@@ -141,6 +141,9 @@ function main(){
     var ust=-1
     var usp=-1
 
+    var usbd=-1
+    var usbt=-1
+
     var useta=-1
     
     usl=parseFloat(document.getElementById("deltaL").value)/2
@@ -151,16 +154,18 @@ function main(){
     if(usl!=NaN&&usl>0.0&&usd!=NaN&&usd>0.0&&ust!=NaN&&ust>0.0&&usp!=NaN&&usp>0.0&&H!=NaN&&H>0.0&&p>p0){
         Usp0=usp/Math.sqrt(3)
         UsL=usl/Math.sqrt(3)
-        Ust=Math.sqrt(xigamat+(ust/Math.sqrt(3)))
-        Usd=Math.sqrt(xigamad+(usd/Math.sqrt(3)))
+        usbd=usd/Math.sqrt(3)
+        usbt=ust/Math.sqrt(3)
+        Usd=Math.sqrt(xigamad+usbd)
+        Ust=Math.sqrt(xigamat+usbt)
         E=Math.sqrt(Math.pow((Usp0/(p-p0)),2)+Math.pow((UsL/L),2)+Math.pow((Ust/tba),2)+Math.pow((Usd/dba),2))
         useta=E*etaba
     }
     else{
         if(p<=p0){alert("提示：小球密度必须大于液体密度")}
         E="无数据"
-        Usd="无数据"
-        Ust="无数据"
+        usbd="无数据"
+        usbt="无数据"
         useta="无数据"
     }
 //计算小球速度v
@@ -182,11 +187,11 @@ if(flag){
 
     document.getElementById("dba").innerHTML="小球直径平均值d="+dba+"mm"
     document.getElementById("usad").innerHTML="直径A类不确定度UsAd=标准误差σd="+xigamad+"mm"
-    document.getElementById("usbd").innerHTML="直径B类不确定度UsBd="+Usd+"mm"
+    document.getElementById("usbd").innerHTML="直径B类不确定度UsBd="+usbd+"mm"
 
     document.getElementById("tba").innerHTML="时间平均值t="+tba+"s"
     document.getElementById("usat").innerHTML="时间A类不确定度UsAt=标准误差σt="+xigamat+"s"
-    document.getElementById("usbt").innerHTML="时间B类不确定度UsBt="+Ust+"s"
+    document.getElementById("usbt").innerHTML="时间B类不确定度UsBt="+usbt+"s"
 
     document.getElementById("etaba").innerHTML="平均粘度系数η="+etaba+"Pa·s"
     document.getElementById("xigamaeta").innerHTML="粘度系数标准差ση="+xigamaeta+"Pa·s"
