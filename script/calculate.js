@@ -148,7 +148,7 @@ function main(){
     
     usl=parseFloat(document.getElementById("deltaL").value)/2
     usd=parseFloat(document.getElementById("deltad").value)/2
-    ust=parseFloat(document.getElementById("deltat").value)/2
+    ust=parseFloat(document.getElementById("deltat").value)
     usp=parseFloat(document.getElementById("deltap").value)/2
     
     if(usl!=NaN&&usl>0.0&&usd!=NaN&&usd>0.0&&ust!=NaN&&ust>0.0&&usp!=NaN&&usp>0.0&&H!=NaN&&H>0.0&&p>p0){
