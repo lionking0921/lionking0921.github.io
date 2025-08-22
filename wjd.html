@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            position: relative;
+        }
+
+        .header_img{
+            width: 20px;
+            height: 20px;
+        }
+
+        .language-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            color: #2c3e50;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .language-switch:hover {
+            background: #ecf0f1;
+            transform: translateY(-1px);
+        }
+
+        .photo-container {
+            width: 120px;
+            height: 150px;
+            border: 3px solid white;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-shrink: 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header-content {
+            flex: 1;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 15px;
+            font-size: 0.9em;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 1.4em;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .item {
+            margin-bottom: 15px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+
+        .item-subtitle {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .item-date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #ecf0f1;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        table {
+            border-collapse: collapse; /* 合并边框，消除间隙 */
+            width: 100%;
+            text-align: center;
+        }
+        td, th {
+            padding: 10px; /* 可选：为单元格添加一些内边距，使内容更美观 */
+            /* 无需设置边框，或明确设置为无 */
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+            
+            .item-header {
+                flex-direction: column;
+            }
+            
+            .item-date {
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header" style="padding-bottom: 5px;">
+            <div class="photo-container">
+                <img src="images/wjd_blue.jpg" alt="吴君迪的证件照" class="photo">
+            </div>
+            
+            <div class="header-content">
+                <h1 class="name" data-zh="吴君迪" data-en="Jundi Wu">吴君迪</h1>
+                <p class="title" data-zh="山东大学 · 计算机科学与技术" data-en="Shandong University · Computer Science and Technology">山东大学 · 计算机科学与技术</p>
+            </div>
+ 
+            <!-- 语言切换按钮 -->
+            <button class="language-switch" onclick="toggleLanguage()">EN/中文</button>
+        </div>
+
+        <div class="header" style="padding-top: 5px;justify-content: center;">
+            <div class="contact-info">
+                <div class="contact-item"><img class="header_img" src="images/calendar.png"/><span style="margin-left: 5px;" data-zh="2003.09.21" data-en="21/09/2003">2003.09.21</span></div>
+                <div class="contact-item"><img class="header_img" src="images/home.png"/><span style="margin-left: 5px;" data-zh="福建省福州市" data-en="Fuzhou, Fujian">福建省福州市</span></div>
+                <div class="contact-item"><img class="header_img" src="images/location.png"/><span style="margin-left: 5px;" data-zh="山东省青岛市" data-en="Qingdao, Shandong">山东省青岛市</span></div>
+                <div class="contact-item"><img class="header_img" src="images/email.png"/><span style="margin-left: 5px;" data-zh="lionking@wjd.email" data-en="lionking@wjd.email">lionking@wjd.email</span></div>
+                <div class="contact-item"><img class="header_img" src="images/phone.png"/><span style="margin-left: 5px;" data-zh="177-5879-7995" data-en="+86 177-5897-7995">177-5897-7995</span></div>
+                <div class="contact-item"><img class="header_img" src="images/net.png"/><span style="margin-left: 5px;" data-zh="wjd.email/wjd.html" data-en="wjd.email/wjd.html">wjd.email/wjd.html</span></div>
+                <div class="contact-item"><img class="header_img" src="images/github.png"/><span style="margin-left: 5px;" data-zh="github.com/lionking0921" data-en="github.com/lionking0921">github.com/lionking0921</span></div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="section">
+                <h2 class="section-title" data-zh="教育背景" data-en="Educational Background">教育背景</h2>
+                
+                <table>
+                    <tr>
+                        <td>
+                            <div class="item-date" data-zh="学校" data-en="University">学校</div>
+                            <div data-zh="山东大学" data-en="Shandong University">山东大学</div>
+                        </td>
+                        <td>
+                            <div class="item-date" data-zh="学院" data-en="College">学院</div>
+                            <div data-zh="计算机科学与技术" data-en="Computer Science and Technology">计算机科学与技术</div>
+                        </td>
+                        <td>
+                            <div class="item-date" data-zh="专业" data-en="Major">专业</div>
+                            <div data-zh="计科（菁英班）" data-en="CS (Elite Class)">计科（菁英班）</div>                           
+                        </td>
+                        <td>
+                            <div class="item-date" data-zh="班级" data-en="Class">班级</div>
+                            <div data-zh="2022级2班" data-en="Class 2, 2022 Cohort">2022级2班</div>     
+                        </td>
+                    </tr>
+                    <tr>
+                         <td>
+                            <div class="item-date" data-zh="绩点" data-en="GPA">绩点</div>
+                            <div data-zh="3.88/5" data-en="3.88/5">3.88/5</div>
+                        </td>
+                        <td>
+                            <div class="item-date" data-zh="英语六级" data-en="CET-6">英语六级</div>
+                            <div data-zh="486" data-en="486">486</div>
+                        </td>
+                        <td>
+                            <div class="item-date" data-zh="综测" data-en="Comprehensive Evaluation">综测</div>
+                            <div data-zh="86/100" data-en="86/100">86/100</div>                            
+                        </td>
+                        <td>
+                            <div class="item-date" data-zh="排名" data-en="Rank">排名</div>
+                            <div data-zh="8/217" data-en="8/217">8/217</div>     
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title" data-zh="科研经历" data-en="Research Experience">科研经历</h2>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title" data-zh="基于多节点FPGA的神经网络部署与优化" data-en="Deployment and Optimization of Neural Networks Based on Multi-node FPGA">基于多节点FPGA的神经网络部署与优化</div>
+                            <div class="item-subtitle" data-zh="导师：赵梦莹" data-en="Supervisor: Mengying Zhao">导师：赵梦莹</div>
+                        </div>
+                        <div class="item-date" data-zh="2024.12 - 至今" data-en="December 2024 - Now">2024.12 - 至今</div>
+                    </div>
+                    <p class="item-desc" data-zh="人工智能发展导致算力需求激增，CPU性能增长放缓，促使业界采用可编程定制硬件加速计算。FPGA（现场可编程门阵列）兼具高并行度、低功耗和可重构优势，近年在数据中心广泛应用。通过多节点FPGA部署和优化，可有效支持大模型训练。" 
+                       data-en="The rise of AI has driven soaring computational demands, while CPU performance growth has slowed. This has led to the adoption of programmable, customized hardware for acceleration. FPGAs (Field-Programmable Gate Arrays) offer high parallelism, low power consumption, and reconfigurability, making them increasingly popular in data centers. Deploying and optimizing neural networks across multi-node FPGAs provides an effective solution for large model training.">
+                        人工智能发展导致算力需求激增，CPU性能增长放缓，促使业界采用可编程定制硬件加速计算。FPGA（现场可编程门阵列）兼具高并行度、低功耗和可重构优势，近年在数据中心广泛应用。通过多节点FPGA部署和优化，可有效支持大模型训练。
+                    </p>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title" data-zh="基于AnyLoRA模型实现三次元动物服装生成二次元画稿" data-en="Based on the AnyLoRA Model, Generate Anime Artwork from Real-life Fursuit">基于AnyLoRA模型实现三次元动物服装生成二次元画稿</div>
+                            <div class="item-subtitle" data-zh="自主研究" data-en="Independent Study">自主研究</div>
+                        </div>
+                        <div class="item-date" data-zh="2025.05 - 2025.06" data-en="May 2025 - June 2025">2025.05 - 2025.06</div>
+                    </div>
+                    <p class="item-desc" data-zh="本研究提出AIGF框架，基于AnyLoRA模型实现从三次元兽装照片到二次元漫画稿的跨次元生成。通过结合通用furry表情动作模型与用户专属LoRA模型，仅需约100张兽装扫描图即可生成多样化、风格统一的原创画稿，降低成本与时间，提升隐私性。未来将探索基于二/三视图建模以扩大适用人群。" 
+                       data-en="This study proposes AIGF, a framework using the AnyLoRA model to generate 2D anime-style artwork from 3D fursuit photos. By combining a general furry expression/action LoRA with a personalized LoRA trained on ~100 user-provided suit images, it enables efficient, cost-effective, and private generation of diverse, stylistically consistent illustrations. Future work aims to extend the approach to users without full suits by using 2D/3D character design sheets.">
+                        本研究提出AIGF框架，基于AnyLoRA模型实现从三次元兽装照片到二次元漫画稿的跨次元生成。通过结合通用furry表情动作模型与用户专属LoRA模型，仅需约100张兽装扫描图即可生成多样化、风格统一的原创画稿，降低成本与时间，提升隐私性。未来将探索基于双/三视图建模以扩大适用人群。
+                    </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title" data-zh="竞赛经历" data-en="Competition Experience">竞赛经历</h2>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title" data-zh="2023年“高教社杯”全国大学生数学建模竞赛" data-en="CUMCU (2023)">2023年“高教社杯”全国大学生数学建模竞赛</div>
+                            <div class="item-subtitle" style="color: blueviolet;" data-zh="全国一等奖" data-en="National First Prize">全国一等奖</div>
+                        </div>
+                        <div class="item-date" data-zh="2023.09" data-en="September 2023">2023.09</div>
+                    </div>
+                    <p class="item-desc" data-zh="论文题目：基于光学模型的定日镜场优化设计问题的研究" 
+                       data-en="Title: Research on the Optimal Design of Heliostat Field Based on Optical Model">
+                        论文题目：基于光学模型的定日镜场优化设计问题的研究
+                    </p>
+                </div>
+
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title" data-zh="2024年“高教社杯”全国大学生数学建模竞赛" data-en="CUMCU (2024)">2024年“高教社杯”全国大学生数学建模竞赛</div>
+                            <div class="item-subtitle" style="color: blueviolet;" data-zh="全国一等奖" data-en="National First Prize">全国一等奖</div>
+                        </div>
+                        <div class="item-date" data-zh="2024.09" data-en="September 2024">2024.09</div>
+                    </div>
+                    <p class="item-desc" data-zh="论文题目：基于螺旋上刚体运动物理仿真模型的“板凳龙”运动问题的研究" 
+                       data-en="Title: Research on the Movement of Bangdenglong Based on a Physical Simulation Model of Rigid Body Motion Along a Spiral">
+                        论文题目：基于螺旋上刚体运动物理仿真模型的“板凳龙”运动问题的研究
+                    </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title" data-zh="项目经历" data-en="Project Experience">项目经历</h2>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title" data-zh="山青天气" data-en="Shanqing Weather">山青天气</div>
+                            <div class="item-subtitle" data-zh="角色：全栈工程师" data-en="Role: Full Stack Engineer">角色：全栈工程师</div>
+                        </div>
+                        <div class="item-date" data-zh="2023.06 - 至今" data-en="June 2023 - Now">2023.06 - 至今</div>
+                    </div>
+                    <p class="item-desc" data-zh="山青天气是一款提供精细化、网格化天气预报的微信小程序，通过AI模型修正气象数据，使得远离气象观测站的地区也能获得准确的天气预报。" 
+                       data-en="Shanqing Weather is a WeChat mini program that provides refined and grid based weather forecasts. By using AI models to correct meteorological data, accurate weather forecasts can be obtained even in areas far from meteorological observation stations.">
+                        山青天气是一款提供精细化、网格化天气预报的微信小程序，通过AI模型修正气象数据，使得远离气象观测站的地区也能获得准确的天气预报。
+                    </p>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title" data-zh="个人网站" data-en="Personal Website">个人网站</div>
+                            <div class="item-subtitle" data-zh="角色：前端工程师" data-en="Role: Front-end Engineer">角色：前端工程师</div>
+                        </div>
+                        <div class="item-date" data-zh="2022.08 - 至今" data-en="August 2022 - Now">2022.08 - 至今</div>
+                    </div>
+                    <p class="item-desc" data-zh="个人网站是我展示个人信息、项目经历和科研成果的平台。域名：wjd.email" 
+                       data-en="My personal website is a platform for me to showcase my personal information, project experience, and research achievements.Domain Name: wjd.email">
+                        个人网站是我展示个人信息、项目经历和科研成果的平台。域名：wjd.email
+                    </p>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title" data-zh="智能眼镜改造" data-en="Smart Glasses Renovation">智能眼镜改造</div>
+                            <div class="item-subtitle" data-zh="角色：软件工程师" data-en="Role: Software Engineer">角色：软件工程师</div>
+                        </div>
+                        <div class="item-date" data-zh="2025.06 - 至今" data-en="June 2025 - Now">2025.06 - 至今</div>
+                    </div>
+                    <p class="item-desc" data-zh="使用Andriod Studio对智能眼镜进行软件改造，旨在提升用户体验和功能性。通过增加新功能，使得智能眼镜更适合日常使用。" 
+                       data-en="Software transformation of smart glasses using Android Studio aims to enhance user experience and functionality. By adding new features, smart glasses are made more suitable for daily use.">
+                        使用Andriod Studio对智能眼镜进行软件改造，旨在提升用户体验和功能性。通过增加新功能，使得智能眼镜更适合日常使用。
+                    </p>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title" data-zh="校园寻桩" data-en="Searching for Charging Stations on Campus">校园寻桩</div>
+                            <div class="item-subtitle" data-zh="角色：爬虫工程师" data-en="Role: Web Crawler Engineer‌">角色：爬虫工程师</div>
+                        </div>
+                        <div class="item-date" data-zh="2022.11 - 2023.06" data-en="November 2022 - June 2023">2022.11 - 2023.06</div>
+                    </div>
+                    <p class="item-desc" data-zh="校园寻桩是一个基于爬虫技术的项目，旨在帮助用户快速找到校园内的充电桩位置。通过自动抓取和更新数据，提供实时的充电桩信息。" 
+                       data-en="Searching for Charging Stations on Campus is a project based on web crawling technology, aimed at helping users quickly find the location of charging stations on campus. By automatically capturing and updating data, real-time charging station information is provided.">
+                        校园寻桩是一个基于爬虫技术的项目，旨在帮助用户快速找到校园内的充电桩位置。通过自动抓取和更新数据，提供实时的充电桩信息。
+                    </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title" data-zh="掌握技能" data-en="Mastered Skills">掌握技能</h2>
+                <div class="skills">
+
+                    <span class="skill" data-zh="C" data-en="C">C</span>
+                    <span class="skill" data-zh="C++" data-en="C++">C++</span>
+                    <span class="skill" data-zh="Python" data-en="Python">Python</span>
+                    <span class="skill" data-zh="Matlab" data-en="Matlab">Matlab</span>
+
+                    <span class="skill" data-zh="汇编" data-en="Assembly">汇编</span>
+                    <span class="skill" data-zh="模型机设计" data-en="Model Machine Design">模型机设计</span>
+                    <span class="skill" data-zh="Keil" data-en="Keil">Keil</span>
+                    <span class="skill" data-zh="Quartus" data-en="Quartus">Quartus</span>
+
+                    <span class="skill" data-zh="HTML" data-en="HTML">HTML</span>
+                    <span class="skill" data-zh="CSS" data-en="CSS">CSS</span>
+                    <span class="skill" data-zh="JavaScript" data-en="JavaScript">JavaScript</span>
+                    <span class="skill" data-zh="Node.js" data-en="Node.js">Node.js</span>
+                    <span class="skill" data-zh="微信小程序开发工具" data-en="WeChat Mini Program Development Tool">微信小程序开发工具</span>
+
+                    <span class="skill" data-zh="Fiddler" data-en="Fiddler">Fiddler</span>
+                    <span class="skill" data-zh="ProxyPin" data-en="ProxyPin">ProxyPin</span>
+
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title" data-zh="其他技能" data-en="Other Skills">其他技能</h2>
+
+                <p class="intro" data-zh="100米、200米国家三级运动员" 
+                   data-en="100m and 200m National Level 3 Athlete">
+                    100米、200米国家三级运动员
+                </p>
+
+                <p class="intro" data-zh="福州市自行车运动协会会员" 
+                   data-en="Member of Fuzhou Cycling Association">
+                    福州市自行车运动协会会员
+                </p>
+
+                <p class="intro" data-zh="中国音乐学院钢琴九级" 
+                   data-en="Piano Level 9 (Guaranteed by China Conservatory)">
+                    中国音乐学院钢琴九级
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // 语言切换函数
+        function toggleLanguage() {
+            // 获取当前语言状态
+            const currentLang = document.documentElement.getAttribute('lang') || 'zh-CN';
+            const newLang = currentLang === 'zh-CN' ? 'en' : 'zh-CN';
+            
+            // 更新html语言属性
+            document.documentElement.setAttribute('lang', newLang);
+            
+            // 更新所有带有data-zh和data-en属性的元素
+            document.querySelectorAll('[data-zh][data-en]').forEach(element => {
+                element.textContent = newLang === 'zh-CN' ? element.getAttribute('data-zh') : element.getAttribute('data-en');
+            });
+            
+            // 特别处理技能标签，保持英文状态下的大小写
+            document.querySelectorAll('.skill[data-en]').forEach(skill => {
+                const enText = skill.getAttribute('data-en');
+                skill.textContent = newLang === 'zh-CN' ? skill.getAttribute('data-zh') : enText;
+            });
+            
+            // 更新按钮文本
+            const switchBtn = document.querySelector('.language-switch');
+            switchBtn.textContent = newLang === 'zh-CN' ? 'EN/中文' : 'EN/中文';
+            
+            // 添加简单的切换动画效果
+            document.querySelector('.resume-container').style.opacity = '0.8';
+            setTimeout(() => {
+                document.querySelector('.resume-container').style.opacity = '1';
+            }, 200);
+        }
+
+        // 页面加载时根据浏览器语言设置默认语言
+        document.addEventListener('DOMContentLoaded', function() {
+            const userLang = navigator.language || navigator.userLanguage;
+            const preferLang = userLang.startsWith('zh') ? 'zh-CN' : 'en';
+            document.documentElement.setAttribute('lang', preferLang);
+            
+            // 如果用户偏好英文，则自动切换
+            if (preferLang === 'en') {
+                toggleLanguage();
+            }
+        });
+    </script>
+</body>
+</html>
